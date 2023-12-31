@@ -27,7 +27,7 @@ jobs:
     - name: Generate code coverage report with Gradle
       run: ./gradlew jacocoTestReport
     - name: Analyze with SonarCloud
-      run: ./gradlew sonarqube -Dsonar.organization=dev-elliotesco -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+      run: ./gradlew sonar -Dsonar.projectKey=dev-elliotesco_api-laboratory -Dsonar.host.url=https://sonarcloud.io -Dsonar.token=${{ secrets.SONAR_TOKEN }}
     - name: SonarQube Quality Gate Check
       uses: sonarsource/sonarqube-quality-gate-action@master
       timeout-minutes: 5

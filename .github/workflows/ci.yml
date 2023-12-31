@@ -45,8 +45,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Grant execute permissions to gradlew
-        run: chmod +x ./gradlew
       - name: Build and push
         uses: docker/build-push-action@v4
         with:

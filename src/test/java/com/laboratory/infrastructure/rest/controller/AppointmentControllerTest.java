@@ -28,7 +28,7 @@ import static org.mockito.internal.verification.VerificationModeFactory.times;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-public class AppointmentControllerTest {
+class AppointmentControllerTest {
     @InjectMocks
     private AppointmentController appointmentController;
     @Mock

@@ -7,6 +7,9 @@ WORKDIR /home/gradle/src
 # Copia los archivos necesarios para aprovechar el caché de las dependencias
 COPY build.gradle settings.gradle gradlew ./
 
+# Otorga permisos de ejecución a gradlew
+RUN chmod +x ./gradlew
+
 # Copia el directorio gradle
 COPY gradle ./gradle
 

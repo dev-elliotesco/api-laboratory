@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  REGISTRY: docker.io
+  IMAGE_NAME: "develliotesco/api-laboratory"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Setup Java JDK
+      uses: actions/setup-java@v1.4.4
+      with:
+        java-version: '17'
+    - name: Compile and build with Gradle
+      run: ./gradlew build
+    - name: Unit test with Gradle
+      run: ./gradlew test
+    - name: Generate code coverage report with Gradle
+      run: ./gradlew jacocoTestReport

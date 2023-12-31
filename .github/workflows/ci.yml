@@ -18,7 +18,7 @@ jobs:
       uses: actions/setup-java@v4.0.0
       with:
         java-version: '17'
-        distribution: jdk
+        distribution: 'oracle'
     - name: Grant execute permissions to gradlew
       run: chmod +x ./gradlew
     - name: Compile and build with Gradle

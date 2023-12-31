@@ -37,6 +37,13 @@ dependencies {
 	testImplementation 'org.mockito:mockito-core:4.2.0'
 }
 
+jacocoTestReport {
+	reports {
+		xml.required = true
+		html.required = true
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }

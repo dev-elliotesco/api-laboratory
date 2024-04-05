@@ -35,3 +35,5 @@ Luego ejecutar el siguiente comando para correr el contenedor, este levantara la
 $ docker run -p 8080:8080 api-laboratory
 ```
 
+
+
